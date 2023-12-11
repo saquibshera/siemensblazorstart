@@ -1,0 +1,50 @@
+﻿
+@page "/mycomponent"
+@inherits MyComponentBase
+<h1>@Initialsnames</h1>
+<h2 class="myclass">My name is @name and address is @address</h2>
+<button type="button" @onclick="getdata" >Call</button>
+
+<table class="table">
+    <thead>
+        <tr>
+        <th>
+            Id
+            </th>
+    <th>
+        Name
+    </th>
+    <th>
+        Address
+    </th>
+        </tr>
+    </thead>
+    <tbody>
+        @if (persons != null)
+        {
+            @foreach (var item in persons)
+            {
+                <tr>
+                    <td>
+                        @item.Id
+                    </td>
+                    <td>
+                        @item.Name
+                    </td>
+                    <td>
+                        @item.Address
+                    </td>
+                </tr>
+            }
+        }
+        else
+        {
+            <tr>
+                <td colspan="3">No data found</td>
+            </tr>
+        }
+
+    </tbody>
+</table>
+
+
