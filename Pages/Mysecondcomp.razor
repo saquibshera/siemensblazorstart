@@ -1,7 +1,68 @@
 ﻿
 @page "/mycomp"
+@using Siemensblazorserverapp.Models;
+@using Siemensblazorserverapp.Services;
+@using System.Diagnostics;
 <h3>Mysecondcomp</h3>
 <h1>My name is @name </h1>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                Id
+            </th>
+            <th>
+                Name
+            </th>
+            <th>
+                Address
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+        @if (persons != null)
+        {
+            @foreach (var item in persons)
+            {
+                <tr>
+                    <td>
+                        @item.Id
+                    </td>
+                    <td>
+                        @item.Name
+                    </td>
+                    <td>
+                        @item.Address
+                    </td>
+                </tr>
+            }
+        }
+        else
+        {
+           <div class="spinner"></div>
+        }
+        @myname
+
+    </tbody>
+</table>
 @code {
+    [Parameter]
+    public string myname{ get; set; }
+    public List<Person> persons;
+    [Inject]
+
+    public IPersonService services{ get; set; }
     public string name = "indu";
+    protected override async Task OnInitializedAsync()
+    {
+        Debug.WriteLine("component called");
+
+        await Task.Run(loademployee);
+
+    }
+    public void loademployee()
+    {
+        Thread.Sleep(2000);
+        persons=services.GetAllPersons();
+    }
 }

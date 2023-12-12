@@ -1,6 +1,8 @@
 using Microsoft.AspNetCore.Components;
 using Microsoft.AspNetCore.Components.Web;
+using Microsoft.EntityFrameworkCore;
 using Siemensblazorserverapp.Data;
+using Siemensblazorserverapp.Services;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -8,7 +10,8 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddRazorPages();
 builder.Services.AddServerSideBlazor();
 builder.Services.AddSingleton<WeatherForecastService>();
-
+builder.Services.AddSingleton<IPersonService, PersonService>();
+builder.Services.AddDbContext<DataContext>(options => options.UseSqlServer(builder.Configuration.GetConnectionString("DevConnection")));
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.

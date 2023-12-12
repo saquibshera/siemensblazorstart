@@ -2,9 +2,21 @@
 @page "/mycomponent"
 @inherits MyComponentBase
 <h1>@Initialsnames</h1>
-<h2 class="myclass">My name is @name and address is @address</h2>
-<button type="button" @onclick="getdata" >Call</button>
 
+<h2 class="myclass">My name is @name and address is @address</h2>
+<button type="button" @onclick="getdata" class="btn btn-outline-success" >Call</button>
+<input @bind="colour" />
+<div @bind-style="colour" @bind-style:event="onchange" >
+    <h3>The backgrouncolor should change</h3>
+</div>
+<h1>@Myname</h1>
+<input @bind="Myname" @bind:event="oninput" />
+<div>
+    <textarea @bind="Description" @bind:event="oninput"/>
+</div>
+<div>
+    count:@Description.Length
+</div>
 <table class="table">
     <thead>
         <tr>
@@ -24,24 +36,12 @@
         {
             @foreach (var item in persons)
             {
-                <tr>
-                    <td>
-                        @item.Id
-                    </td>
-                    <td>
-                        @item.Name
-                    </td>
-                    <td>
-                        @item.Address
-                    </td>
-                </tr>
+              <DisplayPerson personitem="item" OnEmployeedeleted="Employeedeleted"/>
             }
         }
         else
         {
-            <tr>
-                <td colspan="3">No data found</td>
-            </tr>
+           <div class="spinner" ></div>
         }
 
     </tbody>

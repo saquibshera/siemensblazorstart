@@ -1,0 +1,20 @@
+﻿
+@inherits DisplayPersonBase
+
+
+<tr>
+    <td>
+        @personitem.Id
+    </td>
+    <td>
+        @personitem.Name
+    </td>
+    <td>
+        @personitem.Address
+    </td>
+    <td>
+        <button type="button" class="btn btn-danger" @onclick="DeleteEmployee">Delete</button>
+    </td>
+</tr>
+
+
