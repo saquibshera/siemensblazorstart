@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNetCore.Components;
 using Siemensblazorserverapp.Data;
+using Siemensblazorserverapp.Dtos;
 using Siemensblazorserverapp.Models;
 using Siemensblazorserverapp.Services;
 
@@ -10,10 +11,10 @@ namespace Siemensblazorserverapp.Pages
         [Inject]
         public IPersonService personservice { get; set; }
         public string Myname { get; set; }  
-        [Inject]
-        public DataContext _context { get; set; }
+        
+       // public DataContext _context { get; set; }
         //dependency injection
-        public List<Person> persons = null;
+        public List<Persondto> persons = null;
         public string Initialsnames = "Hello names";
         public string colour { get; set; } = "background-color:red";
 
@@ -33,11 +34,12 @@ namespace Siemensblazorserverapp.Pages
         public void loaddata()
         {
 
-            persons=_context.tablepersons.ToList();
+            persons=personservice.GetAllPersons();
         }
         public async Task Employeedeleted()
         {
-            persons = _context.tablepersons.ToList();
+
+            persons = personservice.GetAllPersons();
         }
     }
 }

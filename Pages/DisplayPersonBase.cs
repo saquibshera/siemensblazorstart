@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNetCore.Components;
 using Siemensblazorserverapp.Data;
+using Siemensblazorserverapp.Dtos;
 using Siemensblazorserverapp.Models;
 
 namespace Siemensblazorserverapp.Pages
@@ -10,7 +11,7 @@ namespace Siemensblazorserverapp.Pages
         public DataContext _con { get;set; }
 
         [Parameter]
-        public Person personitem { get; set; }
+        public Persondto personitem { get; set; }
 
         [Parameter]
         public EventCallback<int> OnEmployeedeleted { get; set; }
@@ -19,8 +20,8 @@ namespace Siemensblazorserverapp.Pages
         public void DeleteEmployee()
         {
             
-            _con.tablepersons.Remove(personitem);
-            _con.SaveChanges();
+           // _con.tablepersons.Remove(personitem);
+          //  _con.SaveChanges();
             OnEmployeedeleted.InvokeAsync(personitem.Id);
         }
     }

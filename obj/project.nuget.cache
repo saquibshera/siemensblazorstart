@@ -1,11 +1,13 @@
 {
   "version": 2,
-  "dgSpecHash": "UBCeOWPI2lfSZdWNuabM737ZHCx8vM+HUulENJwFOrzGop+tRj/M+oQwi+Jk8PWSS2MRZF2geavntMnTAR1hFQ==",
+  "dgSpecHash": "VUDKJEpMpu3T6XX+iJk2ivl0uybP43sRagOD0mOhMCiy3fX+6HoaGaCXxQYQ4BjrNql035wI07I3Z4AQ5d0J7A==",
   "success": true,
   "projectFilePath": "C:\\Users\\saqui\\OneDrive\\Desktop\\cognizant\\Siemensblazorserverapp\\Siemensblazorserverapp\\Siemensblazorserverapp.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\saqui\\.nuget\\packages\\automapper\\12.0.1\\automapper.12.0.1.nupkg.sha512",
+    "C:\\Users\\saqui\\.nuget\\packages\\automapper.extensions.microsoft.dependencyinjection\\12.0.1\\automapper.extensions.microsoft.dependencyinjection.12.0.1.nupkg.sha512",
     "C:\\Users\\saqui\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
-    "C:\\Users\\saqui\\.nuget\\packages\\microsoft.csharp\\4.5.0\\microsoft.csharp.4.5.0.nupkg.sha512",
+    "C:\\Users\\saqui\\.nuget\\packages\\microsoft.csharp\\4.7.0\\microsoft.csharp.4.7.0.nupkg.sha512",
     "C:\\Users\\saqui\\.nuget\\packages\\microsoft.data.sqlclient\\2.1.4\\microsoft.data.sqlclient.2.1.4.nupkg.sha512",
     "C:\\Users\\saqui\\.nuget\\packages\\microsoft.data.sqlclient.sni.runtime\\2.1.1\\microsoft.data.sqlclient.sni.runtime.2.1.1.nupkg.sha512",
     "C:\\Users\\saqui\\.nuget\\packages\\microsoft.entityframeworkcore\\6.0.0\\microsoft.entityframeworkcore.6.0.0.nupkg.sha512",

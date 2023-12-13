@@ -1,9 +1,10 @@
-﻿using Siemensblazorserverapp.Models;
+﻿using Siemensblazorserverapp.Dtos;
+using Siemensblazorserverapp.Models;
 
 namespace Siemensblazorserverapp.Services
 {
     public interface IPersonService
     {
-        List<Person> GetAllPersons();
+        List<Persondto> GetAllPersons();
     }
 }

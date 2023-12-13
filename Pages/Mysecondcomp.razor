@@ -1,5 +1,6 @@
 ﻿
 @page "/mycomp"
+@using Siemensblazorserverapp.Dtos;
 @using Siemensblazorserverapp.Models;
 @using Siemensblazorserverapp.Services;
 @using System.Diagnostics;
@@ -48,7 +49,7 @@
 @code {
     [Parameter]
     public string myname{ get; set; }
-    public List<Person> persons;
+    public List<Persondto> persons;
     [Inject]
 
     public IPersonService services{ get; set; }

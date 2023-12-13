@@ -64,3 +64,5 @@ C:\Users\saqui\OneDrive\Desktop\cognizant\Siemensblazorserverapp\Siemensblazorse
 C:\Users\saqui\OneDrive\Desktop\cognizant\Siemensblazorserverapp\Siemensblazorserverapp\bin\Debug\net6.0\runtimes\win\lib\netstandard2.0\System.Security.Cryptography.ProtectedData.dll
 C:\Users\saqui\OneDrive\Desktop\cognizant\Siemensblazorserverapp\Siemensblazorserverapp\bin\Debug\net6.0\runtimes\win\lib\netcoreapp3.0\System.Windows.Extensions.dll
 C:\Users\saqui\OneDrive\Desktop\cognizant\Siemensblazorserverapp\Siemensblazorserverapp\obj\Debug\net6.0\Siemensblazorserverapp.csproj.CopyComplete
+C:\Users\saqui\OneDrive\Desktop\cognizant\Siemensblazorserverapp\Siemensblazorserverapp\bin\Debug\net6.0\AutoMapper.dll
+C:\Users\saqui\OneDrive\Desktop\cognizant\Siemensblazorserverapp\Siemensblazorserverapp\bin\Debug\net6.0\AutoMapper.Extensions.Microsoft.DependencyInjection.dll
