@@ -1,8 +1,10 @@
 ﻿using AutoMapper;
 using Microsoft.AspNetCore.Components;
+using Microsoft.AspNetCore.Mvc;
 using Siemensblazorserverapp.Data;
 using Siemensblazorserverapp.Dtos;
 using Siemensblazorserverapp.Models;
+using System.Diagnostics;
 
 namespace Siemensblazorserverapp.Services
 {
@@ -10,12 +12,29 @@ namespace Siemensblazorserverapp.Services
     {
         private readonly DataContext _condatabase;
         private readonly IMapper _mapper;
-
+       // public Person per = new Person();
         public PersonService(DataContext condatabase,IMapper mapper)
         {
             _condatabase = condatabase;
             this._mapper = mapper;
         }
+
+        public void AddPerson(Person person)
+        {
+          // Person perso =_mapper.Map<Person>(person);
+            //Person perso= new Person { Name = person.Name,Address=person.Address };
+            if (person != null)
+            {
+                _condatabase.tablepersons.Add(person);
+                _condatabase.SaveChanges();
+            }
+            else
+            {
+                Debug.WriteLine("Its null");
+            }
+            
+        }
+
         public List<Persondto> GetAllPersons()
         {
             //List<Person> persons;
@@ -29,5 +48,6 @@ namespace Siemensblazorserverapp.Services
             return per;
            
         }
+
     }
 }

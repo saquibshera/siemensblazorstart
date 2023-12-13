@@ -1,0 +1,17 @@
+﻿@page "/AddPerson"
+@inherits AddPersonBase
+<h3>AddPerson</h3>
+
+<EditForm Model="@personform" OnValidSubmit="Handlevalidsubmit">
+    <DataAnnotationsValidator/>
+    <ValidationSummary/>
+            <label for="Name">Name</label>
+            <InputText @bind-Value="personform.Name"/>
+            <ValidationMessage For="@(()=>personform.Name)"/>
+
+    <label for="Address">Address</label>
+    <InputText @bind-Value="personform.Address" />
+    <ValidationMessage For="@(()=>personform.Address)" />
+    <button type="submit">Add</button>
+</EditForm>
+
